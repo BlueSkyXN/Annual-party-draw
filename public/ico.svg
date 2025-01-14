@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- 背景圆形 -->
+  <circle cx="16" cy="16" r="16" fill="#e60012"/>
+  
+  <!-- L字样 - 简化的Lucky -->
+  <path d="M10,8 L10,24 L22,24" 
+        stroke="#ffffff" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        fill="none"/>
+  
+  <!-- 点缀 -->
+  <circle cx="22" cy="8" r="3" fill="#ffffff"/>
+</svg>
