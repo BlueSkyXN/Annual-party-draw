@@ -382,7 +382,7 @@ export default {
 #root {
   height: 100%;
   position: relative;
-  background-image: url('./assets/bg1.jpg');
+  background-image: url('~@/assets/bg1.jpg');
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -390,6 +390,17 @@ export default {
   .mask {
     -webkit-filter: blur(5px);
     filter: blur(5px);
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
   }
   header {
     height: 50px;
@@ -443,11 +454,12 @@ export default {
 }
 
 #resbox {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   width: 1280px;
   transform: translateX(-50%) translateY(-50%);
+  z-index: 9999;
   text-align: center;
   p {
     color: red;
