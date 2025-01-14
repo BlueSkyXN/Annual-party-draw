@@ -298,18 +298,25 @@ export default {
       canvas.id = 'rootcanvas';
       this.$el.querySelector('#main').appendChild(canvas);
     },
+    // 在 App.vue 文件中找到 startTagCanvas 方法
     startTagCanvas() {
       this.createCanvas();
       const { speed } = this;
       window.TagCanvas.Start('rootcanvas', 'tags', {
-        textColour: null,
+        textColour: '#FFD700', // 修改为金色 
         initial: speed(),
         dragControl: 1,
         textHeight: 20,
         noSelect: true,
         lock: 'xy',
+        // 可以添加以下参数让效果更好
+        shadow: '#000',       // 添加文字阴影
+        shadowBlur: 2,        // 阴影模糊度
+        weight: true,         // 使字体加粗
+        fadeIn: 800,          // 淡入效果
+        depth: 0.99,          // 3D深度效果
       });
-    },
+    }
     reloadTagCanvas() {
       window.TagCanvas.Reload('rootcanvas');
     },
