@@ -316,7 +316,7 @@ export default {
         fadeIn: 800,          // 淡入效果
         depth: 0.99,          // 3D深度效果
       });
-    }
+    },
     reloadTagCanvas() {
       window.TagCanvas.Reload('rootcanvas');
     },
