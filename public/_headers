@@ -1,10 +1,19 @@
-/lucky-draw/js/*.js
+/*.js
   Content-Type: application/javascript
   X-Content-Type-Options: nosniff
 
-/lucky-draw/css/*.css
+/*.css
   Content-Type: text/css
   X-Content-Type-Options: nosniff
 
-/*
+/*.html
+  Content-Type: text/html; charset=utf-8
+  X-Content-Type-Options: nosniff
+
+/*.json
+  Content-Type: application/json
+  X-Content-Type-Options: nosniff
+
+/*.ico
+  Content-Type: image/x-icon
   X-Content-Type-Options: nosniff
