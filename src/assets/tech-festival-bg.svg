@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <!-- 背景渐变 - 调亮 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#cc0000;stop-opacity:1">
+        <animate attributeName="stop-color" 
+          values="#cc0000;#ff1111;#cc0000" 
+          dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#801060;stop-opacity:1">
+        <animate attributeName="stop-color" 
+          values="#801060;#cc0000;#801060" 
+          dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- 红色光晕效果 - 调亮 -->
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:rgba(255,100,100,0.5)"/>
+      <stop offset="100%" style="stop-color:rgba(255,100,100,0)"/>
+    </radialGradient>
+    
+    <!-- 金色光晕效果 - 调亮 -->
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:rgba(255,223,0,0.4)"/>
+      <stop offset="100%" style="stop-color:rgba(255,223,0,0)"/>
+    </radialGradient>
+
+    <!-- 六边形图案 - 放大 -->
+    <pattern id="hexPattern" x="0" y="0" width="100" height="88" patternUnits="userSpaceOnUse">
+      <path d="M50 4 L90 26 L90 62 L50 84 L10 62 L10 26 Z" fill="none" stroke="rgba(255,200,200,0.15)" stroke-width="2">
+        <animate attributeName="stroke-opacity" 
+          values="0.15;0.3;0.15" 
+          dur="3s" repeatCount="indefinite"/>
+      </path>
+    </pattern>
+
+    <!-- 祥云图案 - 放大 -->
+    <pattern id="cloudPattern" x="0" y="0" width="400" height="400" patternUnits="userSpaceOnUse">
+      <path d="M100,200 C100,150 200,100 300,100 C400,100 500,150 500,200 C500,250 400,300 300,300 C200,300 100,250 100,200" 
+            fill="none" 
+            stroke="rgba(255,223,0,0.2)" 
+            stroke-width="3">
+      </path>
+    </pattern>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+  
+  <!-- 祥云图案层 -->
+  <rect width="100%" height="100%" fill="url(#cloudPattern)" opacity="0.2"/>
+  
+  <!-- 六边形图案背景 -->
+  <rect width="100%" height="100%" fill="url(#hexPattern)"/>
+
+  <!-- 装饰性波浪 - 加粗 -->
+  <path d="M-100,100 C200,150 400,50 600,100 S800,150 1000,100 S1200,50 1400,100 S1600,150 1800,100 S2000,50 2200,100" 
+        fill="none" 
+        stroke="rgba(255,223,0,0.2)" 
+        stroke-width="4">
+    <animate attributeName="d" 
+             dur="10s" 
+             repeatCount="indefinite"
+             values="
+               M-100,100 C200,150 400,50 600,100 S800,150 1000,100 S1200,50 1400,100 S1600,150 1800,100 S2000,50 2200,100;
+               M-100,150 C200,100 400,150 600,100 S800,150 1000,100 S1200,150 1400,100 S1600,150 1800,100 S2000,150 2200,100;
+               M-100,100 C200,150 400,50 600,100 S800,150 1000,100 S1200,50 1400,100 S1600,150 1800,100 S2000,50 2200,100"
+             />
+  </path>
+  
+  <!-- 大型光圈组 -->
+  <g>
+    <circle cx="25%" cy="30%" r="400" fill="url(#redGlow)" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="75%" cy="70%" r="500" fill="url(#goldGlow)" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.2;0.4" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- 装饰性灯笼组 - 放大并增加数量 -->
+  <g>
+    <!-- 左侧灯笼组 -->
+    <g transform="translate(150,100) scale(1.5)">
+      <path d="M0,0 L0,20 M-15,20 Q0,20 15,20 Q30,40 15,60 Q0,80 -15,60 Q-30,40 -15,20" 
+            stroke="#ff6666" 
+            fill="none" 
+            stroke-width="2" 
+            opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <!-- 右侧灯笼组 -->
+    <g transform="translate(1770,100) scale(1.5)">
+      <path d="M0,0 L0,20 M-15,20 Q0,20 15,20 Q30,40 15,60 Q0,80 -15,60 Q-30,40 -15,20" 
+            stroke="#ff6666" 
+            fill="none" 
+            stroke-width="2" 
+            opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <!-- 中间装饰灯笼 -->
+    <g transform="translate(960,150) scale(1.5)">
+      <path d="M0,0 L0,20 M-15,20 Q0,20 15,20 Q30,40 15,60 Q0,80 -15,60 Q-30,40 -15,20" 
+            stroke="#ff6666" 
+            fill="none" 
+            stroke-width="2" 
+            opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- 新年装饰元素：铜钱 - 放大并增加 -->
+  <g>
+    <!-- 左上铜钱 -->
+    <g transform="translate(300,200)">
+      <circle r="30" stroke="#ffd700" fill="none" stroke-width="3" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="-10" y="-10" width="20" height="20" fill="#ffd700" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <!-- 右下铜钱 -->
+    <g transform="translate(1620,800)">
+      <circle r="30" stroke="#ffd700" fill="none" stroke-width="3" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="-10" y="-10" width="20" height="20" fill="#ffd700" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <!-- 中间铜钱 -->
+    <g transform="translate(960,540)">
+      <circle r="30" stroke="#ffd700" fill="none" stroke-width="3" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.7;0.4" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="-10" y="-10" width="20" height="20" fill="#ffd700" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.7;0.4" dur="4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- 闪烁星点 - 放大并增加数量 -->
+  <g>
+    <!-- 红色星点组 -->
+    <g fill="#ff6666">
+      <circle cx="20%" cy="30%" r="3">
+        <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="40%" cy="80%" r="3">
+        <animate attributeName="opacity" values="1;0;1" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="70%" cy="40%" r="3">
+        <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <!-- 金色星点组 -->
+    <g fill="#ffd700">
+      <circle cx="80%" cy="70%" r="3">
+        <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="60%" cy="20%" r="3">
+        <animate attributeName="opacity" values="1;0;1" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="30%" cy="60%" r="3">
+        <animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- 中央科技感装饰圆环 - 放大 -->
+  <g fill="none" stroke="#ffd700" stroke-width="2">
+    <circle cx="960" cy="540" r="300" opacity="0.15">
+      <animate attributeName="r" values="300;320;300" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="960" cy="540" r="320" opacity="0.1">
+      <animate attributeName="r" values="320;340;320" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- 四角装饰 -->
+  <g stroke="#ffd700" stroke-width="2" fill="none">
+    <path d="M50,50 L150,50 L150,150" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1870,50 L1770,50 L1770,150" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M50,1030 L150,1030 L150,930" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1870,1030 L1770,1030 L1770,930" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
