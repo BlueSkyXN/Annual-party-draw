@@ -16,7 +16,15 @@
           <a
             href="javascript:void(0);"
             :style="{
-              color: '#fff',
+              background: '-webkit-linear-gradient(45deg, #FFD700, #FFA500)',
+              background: 'linear-gradient(45deg, #FFD700, #FFA500)',
+              '-webkit-background-clip': 'text',
+              'background-clip': 'text',
+              '-webkit-text-fill-color': 'transparent',
+              'text-fill-color': 'transparent',
+              textShadow: '0 2px 4px rgba(255, 215, 0, 0.3)',
+              fontWeight: 'bold',
+              filter: 'drop-shadow(0 0 2px rgba(255, 215, 0, 0.2))'
             }"
           >
             {{ item.name ? item.name : item.key }}
@@ -93,7 +101,7 @@
     <Result :visible.sync="showResult"></Result>
 
     <span class="copy-right">
-      <!--Copyright©zhangyongfeng5350@gmail.com -->
+      <!-- Copyright©zhangyongfeng5350@gmail.com -->
     </span>
 
     <audio
@@ -110,6 +118,7 @@
     </audio>
   </div>
 </template>
+
 <script>
 import LotteryConfig from '@/components/LotteryConfig';
 import Publicity from '@/components/Publicity';
@@ -370,6 +379,7 @@ export default {
   },
 };
 </script>
+
 <style lang="scss">
 #root {
   height: 100%;
@@ -481,9 +491,19 @@ export default {
       bottom: 0;
       left: 0;
       font-size: 14px;
-      // border-radius: 50%;
       z-index: 1;
     }
   }
 }
-</style>
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
