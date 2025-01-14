@@ -16,9 +16,7 @@
           <a
             href="javascript:void(0);"
             :style="{
-              color: '#FFD700',
-              textShadow: '0 0 6px rgba(255, 215, 0, 0.5)',
-              fontWeight: 'bold'
+              color: '#fff',
             }"
           >
             {{ item.name ? item.name : item.key }}
@@ -95,7 +93,7 @@
     <Result :visible.sync="showResult"></Result>
 
     <span class="copy-right">
-      <!-- Copyright©zhangyongfeng5350@gmail.com -->
+      <!--Copyright©zhangyongfeng5350@gmail.com -->
     </span>
 
     <audio
@@ -112,7 +110,6 @@
     </audio>
   </div>
 </template>
-
 <script>
 import LotteryConfig from '@/components/LotteryConfig';
 import Publicity from '@/components/Publicity';
@@ -305,16 +302,12 @@ export default {
       this.createCanvas();
       const { speed } = this;
       window.TagCanvas.Start('rootcanvas', 'tags', {
-        textColour: '#FFD700',
+        textColour: null,
         initial: speed(),
         dragControl: 1,
         textHeight: 20,
         noSelect: true,
         lock: 'xy',
-        textShadow: '#000',
-        shadowBlur: 5,
-        shadowOffset: [2,2],
-        weight: true
       });
     },
     reloadTagCanvas() {
@@ -377,12 +370,11 @@ export default {
   },
 };
 </script>
-
 <style lang="scss">
 #root {
   height: 100%;
   position: relative;
-  background-image: url('~@/assets/bg1.jpg');
+  background-image: url('./assets/bg1.jpg');
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -390,17 +382,6 @@ export default {
   .mask {
     -webkit-filter: blur(5px);
     filter: blur(5px);
-    position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 999;
-    }
   }
   header {
     height: 50px;
@@ -454,12 +435,11 @@ export default {
 }
 
 #resbox {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   width: 1280px;
   transform: translateX(-50%) translateY(-50%);
-  z-index: 9999;
   text-align: center;
   p {
     color: red;
@@ -501,19 +481,9 @@ export default {
       bottom: 0;
       left: 0;
       font-size: 14px;
+      // border-radius: 50%;
       z-index: 1;
     }
   }
 }
-
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+</style>
