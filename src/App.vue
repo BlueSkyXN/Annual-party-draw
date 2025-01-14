@@ -16,15 +16,9 @@
           <a
             href="javascript:void(0);"
             :style="{
-              background: '-webkit-linear-gradient(45deg, #FFD700, #FFA500)',
-              background: 'linear-gradient(45deg, #FFD700, #FFA500)',
-              '-webkit-background-clip': 'text',
-              'background-clip': 'text',
-              '-webkit-text-fill-color': 'transparent',
-              'text-fill-color': 'transparent',
-              textShadow: '0 2px 4px rgba(255, 215, 0, 0.3)',
-              fontWeight: 'bold',
-              filter: 'drop-shadow(0 0 2px rgba(255, 215, 0, 0.2))'
+              color: '#FFD700',
+              textShadow: '0 0 6px rgba(255, 215, 0, 0.5)',
+              fontWeight: 'bold'
             }"
           >
             {{ item.name ? item.name : item.key }}
@@ -311,12 +305,16 @@ export default {
       this.createCanvas();
       const { speed } = this;
       window.TagCanvas.Start('rootcanvas', 'tags', {
-        textColour: null,
+        textColour: '#FFD700',
         initial: speed(),
         dragControl: 1,
         textHeight: 20,
         noSelect: true,
         lock: 'xy',
+        textShadow: '#000',
+        shadowBlur: 5,
+        shadowOffset: [2,2],
+        weight: true
       });
     },
     reloadTagCanvas() {
