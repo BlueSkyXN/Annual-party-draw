@@ -1,6 +1,6 @@
 ## 年会抽奖
 
-[演示地址](https://vitozyf.github.io/lucky-draw/index.html#/?tdsourcetag=s_pctim_aiomsg)
+[演示地址](https://annual-party-draw.pages.dev/)
 
 ## 使用说明
 
@@ -46,18 +46,11 @@
 - 建议使用最新的 Chrome 浏览器打开体验最佳。
 - 由于背景音乐加载较慢，可以在抽奖前提前打开缓存好。或者安装 windows 版本软件到本地，无需联网即可使用。
 
-## windows 软件版本
+# CloudFlare Pages部署方法
 
-- 本抽奖程序的 windows 软件版本下载[安装包](https://github.com/vitozyf/lucky-draw/releases)
+推荐，避免JS环境的麻烦
 
-## Donation
-
-如果这个开源项目对您有帮助，请作者喝杯咖啡吧
-
-Email: vito.z@qq.com
-
-![payimg](./public/pay.png)
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+1. 选择VUE模板，直接部署并跳过然后继续
+2. 设置-构建系统版本-选择版本1
+3. 设置-分支控制-预览分支-无
+4. 部署-重试部署，构建时间1分钟左右
